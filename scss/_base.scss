@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+    overflow: hidden;
+    background: url("../images/red-blue-bg.png") no-repeat center/cover fixed;
+}
+
+main {
+    height: 100%;
+}

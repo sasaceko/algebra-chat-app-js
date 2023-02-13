@@ -1,0 +1,10 @@
+.members {
+    margin: 20px;
+    position: absolute;
+    font-size: 26px;
+
+    &:__count {
+        color: white;
+        font-weight: bold;
+    }
+}

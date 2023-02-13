@@ -1,0 +1,154 @@
+.messages-box {
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    margin: auto;
+    padding-bottom: 85px;
+    width: 300px;
+    max-height: 566px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin: 0 30px 0;
+
+        &--blue {
+            background: #71bbd4;
+
+            &::before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                border-left: 10px solid #71bbd4;
+                border-right: 10px solid transparent;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid #71bbd4;
+                right: -15px;
+                bottom: 10px;
+            }
+        }
+
+        &--green {
+            background: #90EE90;
+
+            &::before {
+                content: "";
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                border-left: 10px solid transparent;
+                border-right: 10px solid #90EE90;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid #90EE90;
+                left: -15px;
+                bottom: 10px;
+            }
+        }
+    }
+
+    &__list {
+        .box {
+            display: inline-block;
+            width: auto;
+            max-width: 500px;
+            margin: 10px 20px;
+            padding: 15px;
+            text-align: left;
+            font-weight: 900;
+            color: #fff;
+            font-family: arial;
+            position: relative;
+            border-radius: 15px;
+        }
+    }
+
+    &--left {
+        align-items: start;
+    }
+
+    &--right {
+        align-items: end;
+    }
+}
+
+#messages__input {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    max-width: 1360px;
+
+    input#message {
+        padding-left: 20px;
+        border-radius: 20px;
+        height: 52px;
+        width: 100%;
+        max-width: 700px;
+        background-color: #d3d3d3;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.message-form {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+
+    &__input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        border: 1px solid red;
+    }
+
+    &__button {
+        margin-left: 25px;
+        width: 150px;
+        height: 52px;
+        border-radius: 20px;
+        background-color: #71bbd4;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+    }
+}
+
+.user-name {
+    font-size: 24px;
+}
+
+
+
+@media (max-width: 768px) {
+    .messages-box {
+        position: relative;
+        top: 62px;
+        overflow-y: auto;
+        padding-bottom: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 78vh;
+        transform: 0;
+        box-shadow: inset 0 0 20px #000;;
+    }
+
+    #messages__input {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 15px;
+    }
+
+    .members__list {
+        display: none;
+    }
+}
